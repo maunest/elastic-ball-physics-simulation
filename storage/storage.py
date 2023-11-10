@@ -7,13 +7,13 @@ class Storage:
         __help (str): Справочная информация.
 
     Methods:
-        get_about() -> str: Возвращает информацию "О программе".
+        get_about() -> str: Возвращает информацию "About".
         get_version() -> str: Возвращает текущую версию приложения.
         get_help() -> str: Возвращает справочную информацию.
     """
 
     def __init__(self):
-        """Инициализация объекта Storage с пустыми значениями.
+        """Инициализация объекта Storage.
         """
 
         with open('storage/data/about.txt', 'r') as file:
@@ -26,10 +26,10 @@ class Storage:
             self.__help = file.read()
 
     def get_about(self) -> str:
-        """Возвращает информацию "О программе".
+        """Возвращает информацию "About".
 
         Returns:
-            str: Информация "О программе".
+            str: Информация "About".
         """
         return self.__about
 
